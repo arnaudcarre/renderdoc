@@ -45,8 +45,6 @@ bool R2dFileHeader::IsSupportedR2dFormat() const
 
 bool r2dImageLoadFromMemory(const uint8_t* src, size_t inSize, uint8_t* dst, size_t dstBufferSize)
 {
-    bool ret = false;
-
     if (inSize < sizeof(R2dFileHeader))
         return false;
     const R2dFileHeader* header = (const R2dFileHeader*)src;
@@ -95,13 +93,6 @@ bool r2dImageLoadFromMemory(const uint8_t* src, size_t inSize, uint8_t* dst, siz
         packedData += packedSize;
     }
 
-    if ( y0 == header->h)
-    {
-        const float* pixels = (const float*)dst;
-        printf("%p\n", pixels);
-        ret = true;
-    }
-
-    return ret;
+    return (y0 == header->h);
 }
 
