@@ -16,7 +16,7 @@ build-*/
 util/buildscripts/support
 Resources/*.png
 qrenderdoc/Makefile*
-*.exe
+#*.exe
 *.aps
 *.ilk
 *.manifest
@@ -36,7 +36,7 @@ obj/
 *.lib
 *.sdf
 *.suo
-*.dll
+#*.dll
 *.swp
 *.orig
 symsrv.yes
@@ -48,3 +48,4 @@ qrenderdoc/3rdparty/pyside
 .DS_Store
 plugins-*/
 __pycache__
+!distrib/
